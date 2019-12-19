@@ -39,6 +39,7 @@ public class RocketMQController {
 
     @RequestMapping("hello")
     public String helloworld(String topic,String msg){
+        //如果向topic指定的tag下发送消息，格式：topic:tag
         rocketMQTemplate.syncSend(topic,msg);
         return "OK";
     }
@@ -85,7 +86,6 @@ public class RocketMQController {
                                 String messageBody = new String(messageExt.getBody(), "utf-8");
 
                                 System.out.println("线程threadName： [" + threadName + "] , Consumer [" + consumerGroup + "]  消费响应：Msg: " + messageExt.getMsgId() + ",msgBody: " + messageBody);//输出消息内容
-
                                 throw new Exception("消费失败，稍后重试");
 //                            }
                         }
