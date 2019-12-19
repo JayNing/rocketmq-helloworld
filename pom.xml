@@ -135,25 +135,6 @@
             <version>2.7.18</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/axis/axis-wsdl4j -->
-        <dependency>
-            <groupId>axis</groupId>
-            <artifactId>axis-wsdl4j</artifactId>
-            <version>1.5.1</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/axis/axis-jaxrpc -->
-        <dependency>
-            <groupId>axis</groupId>
-            <artifactId>axis-jaxrpc</artifactId>
-            <version>1.4</version>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.apache.axis/axis -->
-        <dependency>
-            <groupId>org.apache.axis</groupId>
-            <artifactId>axis</artifactId>
-            <version>1.4</version>
-        </dependency>
         <!-- https://mvnrepository.com/artifact/commons-discovery/commons-discovery -->
         <dependency>
             <groupId>commons-discovery</groupId>
