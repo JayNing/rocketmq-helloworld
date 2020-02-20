@@ -1,5 +1,6 @@
 package com.ning.rocketmq.controller;
 
+import com.ning.rocketmq.service.UserService;
 import org.apache.rocketmq.client.consumer.DefaultMQPushConsumer;
 import org.apache.rocketmq.client.consumer.listener.ConsumeConcurrentlyContext;
 import org.apache.rocketmq.client.consumer.listener.ConsumeConcurrentlyStatus;
@@ -47,6 +48,9 @@ public class RocketMQController {
     private String namesrvAddr;
 
     private  DefaultMQProducer producer;
+
+    @Autowired
+    private UserService userService;
 
     @PostConstruct
     public void init() throws MQClientException {
@@ -111,6 +115,8 @@ public class RocketMQController {
                     if (rocketMQTemplate == null){
                         System.out.println("rocketMQTemplate is null, 内部方法取不到bean");
                     }
+                    String lalalala = userService.getUser("lalalala");
+                    System.out.println("lalalala : " + lalalala);
                     try {
                         for (MessageExt messageExt : list) {
                             ext = messageExt;
