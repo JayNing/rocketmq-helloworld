@@ -108,6 +108,9 @@ public class RocketMQController {
                 @Override
                 public ConsumeConcurrentlyStatus consumeMessage(List<MessageExt> list, ConsumeConcurrentlyContext context) {
                     MessageExt ext = null;
+                    if (rocketMQTemplate == null){
+                        System.out.println("rocketMQTemplate is null, 内部方法取不到bean");
+                    }
                     try {
                         for (MessageExt messageExt : list) {
                             ext = messageExt;
