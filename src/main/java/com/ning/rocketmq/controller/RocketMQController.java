@@ -52,7 +52,7 @@ public class RocketMQController {
     @Autowired
     private UserService userService;
 
-    @PostConstruct
+//    @PostConstruct
     public void init() throws MQClientException {
         producer=new DefaultMQProducer("jay_producer_group");
         producer.setNamesrvAddr("127.0.0.1:9876"); //它会从命名服务器上拿到broker的地址
